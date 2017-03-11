@@ -1,4 +1,4 @@
-NAME = raytracer
+NAME = raytracer.out
 
 CPP_DIR = src
 CPP_DIRS = $(shell find $(CPP_DIR) -type d -follow -print | grep -v '/tests_')
