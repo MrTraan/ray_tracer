@@ -6,10 +6,11 @@
 #include <iostream>
 #include <float.h>
 
-Vec3 color(const Ray &r, Hitable &target) {
+Vec3 color(const Ray& r, Hitable& target) {
   hit_record rec;
   if (target.hit(r, 0.0, MAXFLOAT, rec)) {
-    return 0.5 * Vec3(rec.normal.x() + 1, rec.normal.y() + 1, rec.normal.z() + 1);
+    return 0.5 *
+           Vec3(rec.normal.x() + 1, rec.normal.y() + 1, rec.normal.z() + 1);
   } else {
     Vec3 unit_direction = unit_vector(r.direction());
     float t = 0.5 * (unit_direction.y() + 1.0);
@@ -28,7 +29,7 @@ int main(void) {
   Vec3 vertical(0.0, 2.0, 0.0);
   Vec3 origin(0.0, 0.0, 0.0);
 
-  Sphere s(Vec3(0,0,-1), 0.5);
+  Sphere s(Vec3(0, 0, -1), 0.5);
 
   for (int j = 0; j < ny; j++) {
     for (int i = 0; i < nx; i++) {
