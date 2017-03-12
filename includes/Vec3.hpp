@@ -44,6 +44,8 @@ class Vec3 {
     return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
   }
 
+  inline void lighten_gamma();
+
   inline void make_unit_vector();
 
   float e[3];
@@ -148,3 +150,9 @@ inline Vec3& Vec3::operator/=(const float t) {
 }
 
 inline Vec3 unit_vector(Vec3 v) { return v / v.length(); }
+
+inline void Vec3::lighten_gamma() {
+  e[0] = sqrt(e[0]);
+  e[1] = sqrt(e[1]);
+  e[2] = sqrt(e[2]);
+}
