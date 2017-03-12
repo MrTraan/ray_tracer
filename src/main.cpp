@@ -1,11 +1,11 @@
-#include <Ray.hpp>
-#include <Vec3.hpp>
-#include <Hitable.hpp>
-#include <Sphere.hpp>
-#include <Window.hpp>
-#include <HitableManager.hpp>
-#include <iostream>
 #include <float.h>
+#include <Hitable.hpp>
+#include <HitableManager.hpp>
+#include <Ray.hpp>
+#include <Sphere.hpp>
+#include <Vec3.hpp>
+#include <Window.hpp>
+#include <iostream>
 
 Vec3 color(const Ray& r, HitableManager& manager) {
   hit_record rec;

@@ -1,16 +1,14 @@
 #pragma once
 
-#include <Vec3.hpp>
 #include <Hitable.hpp>
+#include <Vec3.hpp>
 
 class Sphere : public Hitable {
  public:
   Sphere() {}
   Sphere(Vec3 cen, float r) : _center(cen), _radius(r){};
 
-  virtual bool hit(const Ray& r,
-                   float t_min,
-                   float t_max,
+  virtual bool hit(const Ray& r, float t_min, float t_max,
                    hit_record& rec) const;
 
   Vec3 center() { return _center; }

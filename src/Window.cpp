@@ -16,8 +16,7 @@ void Window::display(void) {
     sf::Event event;
     while (_window.pollEvent(event)) {
       // Request for closing the _window
-      if (event.type == sf::Event::Closed)
-        _window.close();
+      if (event.type == sf::Event::Closed) _window.close();
       if ((event.type == sf::Event::KeyPressed) &&
           (event.key.code == sf::Keyboard::Escape))
         _window.close();

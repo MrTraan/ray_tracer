@@ -1,8 +1,6 @@
 #include <Sphere.hpp>
 
-bool Sphere::hit(const Ray& r,
-                 float t_min,
-                 float t_max,
+bool Sphere::hit(const Ray& r, float t_min, float t_max,
                  hit_record& rec) const {
   Vec3 oc = r.origin() - _center;
   float a = dot(r.direction(), r.direction());

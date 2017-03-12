@@ -1,8 +1,6 @@
 #include <HitableManager.hpp>
 
-bool HitableManager::hit(const Ray& r,
-                         float t_min,
-                         float t_max,
+bool HitableManager::hit(const Ray& r, float t_min, float t_max,
                          hit_record& rec) const {
   hit_record temp_rec;
 
